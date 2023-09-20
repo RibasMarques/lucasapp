@@ -1,0 +1,15 @@
+<ul>
+<% @movies.each do |movie| %>
+   <li>
+   <strong><%= movie.name %></strong>
+     in <%= movie.location %>:
+     <%= price (movie) %>
+   </li>
+   <p>
+     <%= truncate(movie.description, length:35, separator: ' ') %>
+   </p>
+   <p>
+     <%= day_and_time(movie) %>
+   </p>
+     <% end %>
+   </ul>
